@@ -9,13 +9,28 @@ export default function move (array, moveIndex, toIndex) {
     2. moveIndex (Object) : The index of the item to move.          (required)
     3. toIndex   (Object) : The index to move item at moveIndex to. (required)
   */
-  let itemRemovedArray = [
-    ...array.slice(0, moveIndex),
-    ...array.slice(moveIndex + 1, array.length)
-  ]
-  return [
-    ...itemRemovedArray.slice(0, toIndex),
-    array[moveIndex],
-    ...itemRemovedArray.slice(toIndex, itemRemovedArray.length)
-  ]
+  let item = array[moveIndex];
+  let length = array.length;
+  let diff = moveIndex - toIndex;
+
+  if (diff > 0) {
+    // move left
+    return [
+      ...array.slice(0, toIndex),
+      item,
+      ...array.slice(toIndex, moveIndex),
+      ...array.slice(moveIndex + 1, length)
+    ];
+  } else if (diff < 0) {
+    // move right
+    return [
+      ...array.slice(0, moveIndex),
+      ...array.slice(moveIndex + 1, toIndex + 1),
+      item,
+      ...array.slice(toIndex + 1, length)
+    ];
+  } else {
+    // Dont move if moveIndex == toIndex
+    return array;
+  }
 }
