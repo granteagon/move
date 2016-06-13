@@ -1,7 +1,8 @@
 {
-  "name": "redux-dry",
+  "name": "lodash-move",
   "version": "1.0.0",
   "description": "DRY up your common use cases in Redux.",
+  "repository": "https://github.com/granteagon/move",
   "main": "lib",
   "scripts": {
     "compile": "./node_modules/.bin/babel --presets es2015,stage-0 -d lib/ src/",
