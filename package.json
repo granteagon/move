@@ -1,6 +1,6 @@
 {
   "name": "lodash-move",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Move an item in an array (proposed lodash feature #1701)",
   "repository": "https://github.com/granteagon/move",
   "main": "lib",
