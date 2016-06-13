@@ -29,8 +29,6 @@ export default function move (array, moveIndex, toIndex) {
       item,
       ...array.slice(toIndex + 1, length)
     ];
-  } else {
-    // Dont move if moveIndex == toIndex
-    return array;
   }
+  return array;
 }
