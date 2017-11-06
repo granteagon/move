@@ -9,9 +9,9 @@ export default function move (array, moveIndex, toIndex) {
     2. moveIndex (Object) : The index of the item to move.          (required)
     3. toIndex   (Object) : The index to move item at moveIndex to. (required)
   */
-  let item = array[moveIndex];
-  let length = array.length;
-  let diff = moveIndex - toIndex;
+  const item = array[moveIndex];
+  const length = array.length;
+  const diff = moveIndex - toIndex;
 
   if (diff > 0) {
     // move left
@@ -23,11 +23,12 @@ export default function move (array, moveIndex, toIndex) {
     ];
   } else if (diff < 0) {
     // move right
+    const targetIndex = toIndex + 1;
     return [
       ...array.slice(0, moveIndex),
-      ...array.slice(moveIndex + 1, toIndex + 1),
+      ...array.slice(moveIndex + 1, targetIndex),
       item,
-      ...array.slice(toIndex + 1, length)
+      ...array.slice(targetIndex, length)
     ];
   }
   return array;
