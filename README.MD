@@ -11,5 +11,5 @@ move(['a', 'b', 'c'], 2, 0)
 // -> ['c', 'a', 'b']
 
 move([{name: 'Fred'}, {name: 'Barney'}, {name: 'Wilma'}, {name: 'Betty'}], 2, 1)
-// -> [{name: 'Fred', name: 'Wilma', name: 'Barney', name: 'Betty'}]
+// -> [{name: 'Fred'}, {name: 'Wilma'}, {name: 'Barney'}, {name: 'Betty'}]
 ```
