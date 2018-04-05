@@ -1,9 +1,32 @@
 # _.move LoDash mixin
 Move an item in an array
 
-`npm install lodash-move`
-
 LoDash issue is [here](https://github.com/lodash/lodash/issues/1701).  Give it a 👍 if you want to see it added to Lodash.
+
+## Usage
+- Install the package via NPM
+```
+npm install lodash-move
+```
+or via Yarn
+```
+yarn add lodash-move
+```
+
+- Import it into your project:
+```js
+// Node.JS
+const move = require('lodash-move')
+
+// ES6+
+import move from 'lodash-move'
+```
+- Use it!
+
+## Syntax
+```js
+move(array, fromIndex, toIndex)
+```
 
 ## Example
 ```js
