@@ -29,6 +29,6 @@ move(['a', 'b','c'], 2, 0)
 
 
 
-move([{name: 'Fred', name: 'Barney', name: 'Wilma', name: 'Betty'}], 2, 1)
+move([{name: 'Fred'}, {name: 'Barney'}, {name: 'Wilma'}, {name: 'Betty'}], 2, 1)
 
 // -> [{name: 'Fred', name: 'Wilman', name: 'Barney', name: 'Betty'}]
